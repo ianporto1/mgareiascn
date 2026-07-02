@@ -1,0 +1,6 @@
+{
+  "name": "MG Areias e Britas",
+  "description": "Site institucional para MG Areias e Britas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
