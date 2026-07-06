@@ -244,7 +244,7 @@ export default function App() {
                 <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
                     <img 
-                      src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&q=80" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Sand_from_Gobi_Desert.jpg" 
                       alt="Areia Fina" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -262,7 +262,7 @@ export default function App() {
                 <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
                     <img 
-                      src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg" 
                       alt="Areia Média" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -280,7 +280,7 @@ export default function App() {
                 <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
                     <img 
-                      src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/8/81/HeavyMineralsBeachSand.jpg" 
                       alt="Areia Grossa" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -298,15 +298,15 @@ export default function App() {
                 <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
                     <img 
-                      src="https://images.unsplash.com/photo-1574768378942-d35272a081a2?auto=format&fit=crop&q=80" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg" 
                       alt="Britas" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Britas (0, 1 e 2)</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Disponível em diversas numerações para concreto usinado, asfalto, fundações e lajes, adequando-se ao seu projeto.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Britas (0 e 1)</h3>
+                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Essenciais para a fabricação de concreto, lajes, colunas e outras estruturas que demandam resistência e durabilidade.</p>
+                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas (0 e 1)." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
                       Solicitar Orçamento <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
@@ -316,33 +316,15 @@ export default function App() {
                 <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
                     <img 
-                      src="https://images.unsplash.com/photo-1584464436214-4e4b52b3149a?auto=format&fit=crop&q=80" 
-                      alt="Pedrisco" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/7/72/DirkvdM_rocks.jpg" 
+                      alt="Pedra Marroada" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pedrisco Limpo</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Excelente para acabamentos em áreas externas, calçadas, jardins e fabricação de blocos e lajes pré-moldadas.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedrisco." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* Produto 6 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://images.unsplash.com/photo-1508215569421-5a41757827e8?auto=format&fit=crop&q=80" 
-                      alt="Pó de Pedra" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pó de Pedra</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Muito utilizado no assentamento de pisos intertravados, asfalto, e estabilização de solo em calçamentos.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pó de Pedra." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pedra Marroada</h3>
+                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Pedra bruta em tamanhos maiores, ideal para construção de muros de arrimo, contenções e fundações pesadas.</p>
+                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedra Marroada." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
                       Solicitar Orçamento <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
