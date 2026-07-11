@@ -1,7 +1,8 @@
 import { MapPin, Phone, Instagram, ArrowRight, Truck, ShieldCheck, Clock, CheckCircle2, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useCallback } from 'react';
-import { motion } from 'motion/react';
+import { useState, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 const FADE_UP = {
   hidden: { opacity: 0, y: 30 },
@@ -20,7 +21,32 @@ const STAGGER = {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start', loop: true });
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [hasShownModal, setHasShownModal] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      if (
+        !hasShownModal &&
+        scrollPosition / (documentHeight - windowHeight) >= 0.6
+      ) {
+        setIsContactModalOpen(true);
+        setHasShownModal(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasShownModal]);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { align: 'start', loop: true, dragFree: true },
+    [WheelGesturesPlugin()]
+  );
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -239,94 +265,104 @@ export default function App() {
 
           <div className="relative w-full max-w-6xl mx-auto px-6 sm:px-16">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6 pb-4">
+              <div className="flex -ml-6 pb-4">
                 {/* Produto 1 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Sand_from_Gobi_Desert.jpg" 
-                      alt="Areia Fina" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Fina</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Ideal para acabamentos finos, rebocos de precisão e assentamento de revestimentos que exigem alta qualidade no acabamento.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Fina." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
+                <div className="pl-6 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0">
+                  <div className="group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Sand_from_Gobi_Desert.jpg" 
+                        alt="Areia Fina" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Fina</h3>
+                      <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Ideal para acabamentos finos, rebocos de precisão e assentamento de revestimentos que exigem alta qualidade no acabamento.</p>
+                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Fina." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Produto 2 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg" 
-                      alt="Areia Média" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Média</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">O tipo mais versátil. Muito utilizada em argamassas de assentamento de tijolos, blocos e para rebocos em geral.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Média." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
+                <div className="pl-6 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0">
+                  <div className="group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg" 
+                        alt="Areia Média" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Média</h3>
+                      <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">O tipo mais versátil. Muito utilizada em argamassas de assentamento de tijolos, blocos e para rebocos em geral.</p>
+                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Média." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Produto 3 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/8/81/HeavyMineralsBeachSand.jpg" 
-                      alt="Areia Grossa" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Grossa</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Perfeita para preparo de concreto, contrapisos e fundações, garantindo a resistência estrutural necessária.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Grossa." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
+                <div className="pl-6 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0">
+                  <div className="group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/8/81/HeavyMineralsBeachSand.jpg" 
+                        alt="Areia Grossa" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Grossa</h3>
+                      <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Perfeita para preparo de concreto, contrapisos e fundações, garantindo a resistência estrutural necessária.</p>
+                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Grossa." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Produto 4 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg" 
-                      alt="Britas" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Britas (0 e 1)</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Essenciais para a fabricação de concreto, lajes, colunas e outras estruturas que demandam resistência e durabilidade.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas (0 e 1)." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
+                <div className="pl-6 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0">
+                  <div className="group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg" 
+                        alt="Britas" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Britas (0 e 1)</h3>
+                      <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Essenciais para a fabricação de concreto, lajes, colunas e outras estruturas que demandam resistência e durabilidade.</p>
+                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas (0 e 1)." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Produto 5 */}
-                <div className="flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0 group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-all duration-300 flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/7/72/DirkvdM_rocks.jpg" 
-                      alt="Pedra Marroada" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pedra Marroada</h3>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Pedra bruta em tamanhos maiores, ideal para construção de muros de arrimo, contenções e fundações pesadas.</p>
-                    <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedra Marroada." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                      Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                    </a>
+                <div className="pl-6 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_31.33%] min-w-0">
+                  <div className="group rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="aspect-[4/3] overflow-hidden bg-neutral-200 relative shrink-0">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/72/DirkvdM_rocks.jpg" 
+                        alt="Pedra Marroada" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pedra Marroada</h3>
+                      <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Pedra bruta em tamanhos maiores, ideal para construção de muros de arrimo, contenções e fundações pesadas.</p>
+                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedra Marroada." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -473,6 +509,55 @@ export default function App() {
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
         </svg>
       </a>
+
+      {/* Contact Modal */}
+      <AnimatePresence>
+        {isContactModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl"
+            >
+              <button 
+                onClick={() => setIsContactModalOpen(false)}
+                className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 transition-colors bg-neutral-100 hover:bg-neutral-200 p-2 rounded-full"
+                aria-label="Fechar"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              
+              <div className="w-16 h-16 bg-[#25D366]/10 text-[#25D366] rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+              </div>
+              
+              <h3 className="text-2xl font-display font-bold text-neutral-900 text-center mb-2">Faça seu Orçamento!</h3>
+              <p className="text-neutral-600 text-center mb-8">
+                Nossa equipe está pronta para te atender com os melhores preços para a sua obra.
+              </p>
+              
+              <a 
+                href="https://wa.me/5564992465992?text=Olá, estava navegando no site e gostaria de fazer um orçamento." 
+                target="_blank" 
+                rel="noreferrer"
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                onClick={() => setIsContactModalOpen(false)}
+              >
+                Falar com um vendedor agora
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
