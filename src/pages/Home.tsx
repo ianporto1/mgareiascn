@@ -195,7 +195,7 @@ export default function App() {
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg text-neutral-900 mb-2">Agilidade</h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">Atendimento rápido e eficiente para que a sua obra não fique parada esperando material.</p>
+                <p className="text-neutral-600 leading-relaxed text-sm">Atendimento rápido e eficiente para que a sua obra continue sempre em andamento.</p>
               </div>
             </motion.div>
           </motion.div>
@@ -286,11 +286,18 @@ export default function App() {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Fina</h3>
+                      <Link to="/areia-fina-caldas-novas" className="group/link">
+                        <h3 className="font-display font-bold text-xl text-neutral-900 mb-2 group-hover/link:text-primary-600 transition-colors">Areia Fina</h3>
+                      </Link>
                       <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Ideal para acabamentos finos, rebocos de precisão e assentamento de revestimentos que exigem alta qualidade no acabamento.</p>
-                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Fina." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                      </a>
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                        <Link to="/areia-fina-caldas-novas" className="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">
+                          Saiba mais
+                        </Link>
+                        <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Fina." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                          Solicitar <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -306,11 +313,18 @@ export default function App() {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Média</h3>
+                      <Link to="/areia-media-caldas-novas" className="group/link">
+                        <h3 className="font-display font-bold text-xl text-neutral-900 mb-2 group-hover/link:text-primary-600 transition-colors">Areia Média</h3>
+                      </Link>
                       <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">O tipo mais versátil. Muito utilizada em argamassas de assentamento de tijolos, blocos e para rebocos em geral.</p>
-                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Média." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                      </a>
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                        <Link to="/areia-media-caldas-novas" className="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">
+                          Saiba mais
+                        </Link>
+                        <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Média." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                          Solicitar <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -326,11 +340,18 @@ export default function App() {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Areia Grossa</h3>
+                      <Link to="/areia-grossa-caldas-novas" className="group/link">
+                        <h3 className="font-display font-bold text-xl text-neutral-900 mb-2 group-hover/link:text-primary-600 transition-colors">Areia Grossa</h3>
+                      </Link>
                       <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Perfeita para preparo de concreto, contrapisos e fundações, garantindo a resistência estrutural necessária.</p>
-                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Grossa." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                      </a>
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                        <Link to="/areia-grossa-caldas-novas" className="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">
+                          Saiba mais
+                        </Link>
+                        <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Areia Grossa." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                          Solicitar <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -346,11 +367,18 @@ export default function App() {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Britas (0 e 1)</h3>
+                      <Link to="/brita-caldas-novas" className="group/link">
+                        <h3 className="font-display font-bold text-xl text-neutral-900 mb-2 group-hover/link:text-primary-600 transition-colors">Britas (0 e 1)</h3>
+                      </Link>
                       <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Essenciais para a fabricação de concreto, lajes, colunas e outras estruturas que demandam resistência e durabilidade.</p>
-                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas (0 e 1)." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                      </a>
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                        <Link to="/brita-caldas-novas" className="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">
+                          Saiba mais
+                        </Link>
+                        <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Britas (0 e 1)." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                          Solicitar <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -366,11 +394,18 @@ export default function App() {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-xl text-neutral-900 mb-2">Pedra Marroada</h3>
+                      <Link to="/pedra-marroada-caldas-novas" className="group/link">
+                        <h3 className="font-display font-bold text-xl text-neutral-900 mb-2 group-hover/link:text-primary-600 transition-colors">Pedra Marroada</h3>
+                      </Link>
                       <p className="text-neutral-600 text-sm mb-4 leading-relaxed flex-1">Pedra bruta em tamanhos maiores, ideal para construção de muros de arrimo, contenções e fundações pesadas.</p>
-                      <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedra Marroada." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                        Solicitar Orçamento <ArrowRight className="w-4 h-4" />
-                      </a>
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                        <Link to="/pedra-marroada-caldas-novas" className="text-sm font-semibold text-neutral-600 hover:text-primary-600 transition-colors">
+                          Saiba mais
+                        </Link>
+                        <a href="https://wa.me/5564992465992?text=Olá, gostaria de um orçamento para Pedra Marroada." target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                          Solicitar <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -404,7 +439,7 @@ export default function App() {
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-            Sua obra não pode parar.
+            Sua obra sempre em movimento.
           </h2>
           <p className="text-white text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Faça um orçamento sem compromisso agora mesmo e garanta os melhores materiais com a entrega mais rápida.
@@ -483,8 +518,9 @@ export default function App() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                   <span className="text-neutral-300 leading-relaxed text-sm">
-                    Caldas Novas, GO.<br/>
-                    Atendemos toda a região.
+                    Av. Guarapari, QUADRA07 LOTE 13 - Parque Real,<br/>
+                    Caldas Novas - GO, 75689-003, Brasil<br/>
+                    <span className="text-neutral-500">Atendemos toda a região.</span>
                   </span>
                 </li>
               </ul>

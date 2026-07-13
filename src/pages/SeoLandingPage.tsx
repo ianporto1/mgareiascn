@@ -15,6 +15,8 @@ interface LandingPageData {
   metaDescription: string;
   heroHeading: string;
   heroSubheading: string;
+  image: string;
+  relatedLinks: { title: string; slug: string }[];
   content: {
     heading: string;
     paragraphs: string[];
@@ -30,6 +32,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Compre Areia em Caldas Novas com a MG Areias e Britas. Areia lavada de qualidade para sua obra. Solicite seu orçamento com entrega rápida.',
     heroHeading: 'Sua Obra Pede a Melhor Areia em Caldas Novas',
     heroSubheading: 'Fornecemos areia de alta qualidade para todos os tipos de construção.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg',
+    relatedLinks: [
+      { title: 'Areia Fina', slug: 'areia-fina-caldas-novas' },
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+      { title: 'Areia Grossa', slug: 'areia-grossa-caldas-novas' },
+    ],
     content: {
       heading: 'Por que escolher a nossa Areia?',
       paragraphs: [
@@ -51,6 +59,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Precisando de Brita em Caldas Novas? Temos Brita 0, Brita 1, Pó de Brita e Pedra Marroada. Melhor preço e agilidade na entrega. Confira!',
     heroHeading: 'Brita de Alta Qualidade em Caldas Novas',
     heroSubheading: 'Estruturas sólidas exigem brita resistente e bem dimensionada.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg',
+    relatedLinks: [
+      { title: 'Pó de Brita', slug: 'po-de-brita-caldas-novas' },
+      { title: 'Pedra Marroada', slug: 'pedra-marroada-caldas-novas' },
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+    ],
     content: {
       heading: 'Qualidade que faz a diferença',
       paragraphs: [
@@ -70,8 +84,14 @@ const landingPages: Record<string, LandingPageData> = {
     keyword: 'Comprar Areia em Caldas Novas',
     intent: 'Compra',
     metaDescription: 'Onde Comprar Areia em Caldas Novas? MG Areias e Britas. Frota própria, carga de areia média, fina e grossa. Clique e peça pelo WhatsApp.',
-    heroHeading: 'Comprar Areia em Caldas Novas nunca foi tão fácil',
+    heroHeading: 'Comprar Areia em Caldas Novas de forma simples e rápida',
     heroSubheading: 'Faça seu pedido diretamente pelo WhatsApp e receba rápido na sua obra.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg',
+    relatedLinks: [
+      { title: 'Areia Fina', slug: 'areia-fina-caldas-novas' },
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+      { title: 'Areia Grossa', slug: 'areia-grossa-caldas-novas' },
+    ],
     content: {
       heading: 'Facilidade e Agilidade na sua Compra',
       paragraphs: [
@@ -93,6 +113,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Quer Comprar Brita em Caldas Novas com segurança e preço justo? Fale com a MG Areias e Britas. Entregas em toda a região. Orçamento online.',
     heroHeading: 'Compre Brita em Caldas Novas com Segurança',
     heroSubheading: 'Entrega garantida, no prazo certo e com o volume exato que você comprou.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg',
+    relatedLinks: [
+      { title: 'Brita', slug: 'brita-caldas-novas' },
+      { title: 'Pó de Brita', slug: 'po-de-brita-caldas-novas' },
+      { title: 'Pedra Marroada', slug: 'pedra-marroada-caldas-novas' },
+    ],
     content: {
       heading: 'Sua melhor opção em Caldas Novas',
       paragraphs: [
@@ -114,6 +140,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Fornecedor de Areia Média em Caldas Novas. Areia lavada de excelente qualidade para assentamento de tijolos, blocos e concretos em geral. Peça já!',
     heroHeading: 'Areia Média de Qualidade em Caldas Novas',
     heroSubheading: 'A melhor areia média lavada para assentamento e concreto.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Sand.jpg',
+    relatedLinks: [
+      { title: 'Areia Fina', slug: 'areia-fina-caldas-novas' },
+      { title: 'Areia Grossa', slug: 'areia-grossa-caldas-novas' },
+      { title: 'Brita', slug: 'brita-caldas-novas' },
+    ],
     content: {
       heading: 'A Areia mais Versátil para a sua Obra',
       paragraphs: [
@@ -135,6 +167,11 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Areia Fina em Caldas Novas para reboco e acabamentos. Compre areia fina limpa com a MG Areias e Britas. Solicite um orçamento rápido.',
     heroHeading: 'Areia Fina para Acabamento em Caldas Novas',
     heroSubheading: 'O toque de qualidade final que o seu reboco e pintura merecem.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Sand_from_Gobi_Desert.jpg',
+    relatedLinks: [
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+      { title: 'Areia Grossa', slug: 'areia-grossa-caldas-novas' },
+    ],
     content: {
       heading: 'Perfeição no Acabamento',
       paragraphs: [
@@ -156,6 +193,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Compre Areia Grossa em Caldas Novas. Ideal para contrapiso e concreto armado. Resistência e qualidade. Fale com a MG Areias e Britas.',
     heroHeading: 'Areia Grossa para Contrapiso e Fundações',
     heroSubheading: 'Força e resistência estrutural para a sua construção em Caldas Novas.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/81/HeavyMineralsBeachSand.jpg',
+    relatedLinks: [
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+      { title: 'Areia Fina', slug: 'areia-fina-caldas-novas' },
+      { title: 'Brita', slug: 'brita-caldas-novas' },
+    ],
     content: {
       heading: 'Resistência Estrutural',
       paragraphs: [
@@ -177,6 +220,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Fornecimento de Pedra Marroada em Caldas Novas para fundações, muros de arrimo e drenagens. Qualidade e entrega no local. Orçamento rápido.',
     heroHeading: 'Pedra Marroada em Caldas Novas',
     heroSubheading: 'Ideal para alicerces, muros de arrimo e sistemas de drenagem.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/72/DirkvdM_rocks.jpg',
+    relatedLinks: [
+      { title: 'Brita', slug: 'brita-caldas-novas' },
+      { title: 'Pó de Brita', slug: 'po-de-brita-caldas-novas' },
+      { title: 'Areia Grossa', slug: 'areia-grossa-caldas-novas' },
+    ],
     content: {
       heading: 'A Solução para Fundações e Arrimos',
       paragraphs: [
@@ -198,6 +247,12 @@ const landingPages: Record<string, LandingPageData> = {
     metaDescription: 'Pó de Brita em Caldas Novas para assentamento de pisos intertravados, calçadas e nivelamentos. Melhor preço da região. Peça pelo WhatsApp.',
     heroHeading: 'Pó de Brita para Calçamentos e Nivelamentos',
     heroSubheading: 'O material ideal para assentar pisos intertravados em Caldas Novas.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/09/20mm-aggregate.jpg',
+    relatedLinks: [
+      { title: 'Brita', slug: 'brita-caldas-novas' },
+      { title: 'Pedra Marroada', slug: 'pedra-marroada-caldas-novas' },
+      { title: 'Areia Média', slug: 'areia-media-caldas-novas' },
+    ],
     content: {
       heading: 'Compactação e Versatilidade',
       paragraphs: [
@@ -238,7 +293,7 @@ export default function SeoLandingPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-neutral-50">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-neutral-900 mb-4">Página não encontrada</h1>
+          <h1 className="text-3xl font-bold text-neutral-900 mb-4">Página indisponível</h1>
           <Link to="/" className="text-primary-600 font-medium hover:underline">Voltar para o Início</Link>
         </div>
       </div>
@@ -306,6 +361,14 @@ export default function SeoLandingPage() {
                 {pageData.heroSubheading}
               </p>
 
+              <div className="w-full h-64 sm:h-80 lg:h-96 rounded-3xl overflow-hidden mb-10 shadow-sm border border-neutral-200">
+                <img 
+                  src={pageData.image} 
+                  alt={pageData.keyword} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
               <div className="bg-white p-6 rounded-2xl border border-neutral-200 shadow-sm mb-8">
                 <h2 className="text-2xl font-bold text-neutral-900 mb-4">{pageData.content.heading}</h2>
                 <div className="space-y-4 text-neutral-600">
@@ -369,13 +432,46 @@ export default function SeoLandingPage() {
                 <Link to="/qual-areia-usar" className="bg-white p-5 rounded-2xl border border-neutral-200 hover:border-primary-300 transition-colors group">
                   <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform w-fit">🤔</span>
                   <span className="font-bold text-neutral-900 group-hover:text-primary-600 block mb-1">Qual usar?</span>
-                  <span className="text-sm text-neutral-500">Descubra o material ideal</span>
+                  <span className="text-sm text-neutral-500">Clique e descubra o material ideal para sua obra</span>
                 </Link>
                 <Link to="/calculadora-de-obra" className="bg-white p-5 rounded-2xl border border-neutral-200 hover:border-primary-300 transition-colors group">
                   <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform w-fit">📐</span>
                   <span className="font-bold text-neutral-900 group-hover:text-primary-600 block mb-1">Calculadora</span>
-                  <span className="text-sm text-neutral-500">Estime a quantidade certa</span>
+                  <span className="text-sm text-neutral-500">Clique e faça a estimativa de materiais necessários para sua construção</span>
                 </Link>
+              </div>
+
+              {/* Veja Também */}
+              <div className="mt-8">
+                <h4 className="text-lg font-bold text-neutral-900 mb-4">Veja também</h4>
+                <div className="space-y-4">
+                  {pageData.relatedLinks.map((link, idx) => {
+                    const relatedData = landingPages[link.slug];
+                    if (!relatedData) return null;
+                    return (
+                      <Link 
+                        key={idx} 
+                        to={`/${link.slug}`} 
+                        className="flex items-center gap-4 bg-white p-3 rounded-xl border border-neutral-200 hover:border-primary-400 hover:shadow-sm transition-all group"
+                      >
+                        <div className="w-20 h-20 shrink-0 rounded-lg overflow-hidden bg-neutral-100">
+                          <img 
+                            src={relatedData.image} 
+                            alt={link.title} 
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                          />
+                        </div>
+                        <div className="flex-grow min-w-0">
+                          <h5 className="font-bold text-neutral-900 group-hover:text-primary-600 truncate">{link.title}</h5>
+                          <p className="text-xs text-neutral-500 line-clamp-2 mt-1 leading-snug">
+                            {relatedData.heroSubheading}
+                          </p>
+                        </div>
+                        <ChevronRight className="w-5 h-5 shrink-0 text-neutral-300 group-hover:text-primary-500 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
 
             </motion.div>
@@ -393,14 +489,14 @@ export default function SeoLandingPage() {
               <span className="text-sm font-medium text-neutral-400">MG Areias e Britas</span>
             </div>
             
-            <div className="flex items-center gap-6">
-               <a href="https://wa.me/5564992465992" target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
-                 <Phone className="w-4 h-4" />
+            <div className="flex flex-col md:flex-row items-center gap-6 text-sm">
+               <a href="https://wa.me/5564992465992" target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-white transition-colors flex items-center gap-2">
+                 <Phone className="w-4 h-4 shrink-0" />
                  (64) 99246-5992
                </a>
-               <span className="text-neutral-400 flex items-center gap-2 text-sm hidden sm:flex">
-                 <MapPin className="w-4 h-4" />
-                 Caldas Novas, GO
+               <span className="text-neutral-400 flex items-center gap-2 text-center md:text-left">
+                 <MapPin className="w-4 h-4 shrink-0" />
+                 Av. Guarapari, QUADRA07 LOTE 13 - Parque Real, Caldas Novas - GO, 75689-003, Brasil
                </span>
             </div>
           </div>

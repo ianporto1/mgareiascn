@@ -133,7 +133,7 @@ export default function DicasConstrucao() {
                 A Importância de Comprar Areia Limpa
               </motion.h2>
               <motion.p variants={FADE_UP} className="text-neutral-600 leading-relaxed mb-6">
-                Muitos não sabem, mas a qualidade da areia impacta diretamente na segurança e durabilidade da construção. 
+                É fundamental saber que a qualidade da areia impacta diretamente na segurança e durabilidade da construção. 
               </motion.p>
               <ul className="space-y-4 mb-8">
                 <motion.li variants={FADE_UP} className="flex items-start gap-3">
@@ -172,7 +172,7 @@ export default function DicasConstrucao() {
                 Entrega Rápida com Frota Própria
               </motion.h2>
               <motion.p variants={FADE_UP} className="text-neutral-600 leading-relaxed mb-6">
-                Ter <strong>frota própria</strong> é o nosso maior diferencial. Não dependemos de terceiros para realizar as entregas. Isso nos permite ter agilidade, cumprir os prazos estabelecidos e realizar manobras seguras dentro do canteiro de obras, facilitando o descarregamento do material.
+                Ter <strong>frota própria</strong> é o nosso maior diferencial. Temos autonomia total para realizar as entregas. Isso nos permite ter agilidade, cumprir os prazos estabelecidos e realizar manobras seguras dentro do canteiro de obras, facilitando o descarregamento do material.
               </motion.p>
 
               <motion.h2 variants={FADE_UP} className="text-3xl font-display font-bold text-neutral-900 mb-6 mt-12">
@@ -263,8 +263,9 @@ export default function DicasConstrucao() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                   <span className="text-neutral-300 leading-relaxed text-sm">
-                    Caldas Novas, GO.<br/>
-                    Atendemos toda a região.
+                    Av. Guarapari, QUADRA07 LOTE 13 - Parque Real,<br/>
+                    Caldas Novas - GO, 75689-003, Brasil<br/>
+                    <span className="text-neutral-500">Atendemos toda a região.</span>
                   </span>
                 </li>
               </ul>

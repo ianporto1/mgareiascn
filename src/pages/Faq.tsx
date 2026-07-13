@@ -221,8 +221,9 @@ export default function Faq() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                   <span className="text-neutral-300 leading-relaxed text-sm">
-                    Caldas Novas, GO.<br/>
-                    Atendemos toda a região.
+                    Av. Guarapari, QUADRA07 LOTE 13 - Parque Real,<br/>
+                    Caldas Novas - GO, 75689-003, Brasil<br/>
+                    <span className="text-neutral-500">Atendemos toda a região.</span>
                   </span>
                 </li>
               </ul>
