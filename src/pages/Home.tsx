@@ -425,7 +425,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
             
             {/* Brand */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-3">
               <div className="flex items-center mb-6 bg-white p-2 rounded-lg inline-block">
                 <img src="/logo.png" alt="MG Areias e Britas" className="h-16 w-auto mix-blend-multiply" />
               </div>
@@ -453,8 +453,24 @@ export default function App() {
               </ul>
             </div>
 
+            {/* Materiais SEO Links */}
+            <div className="lg:col-span-2">
+              <h4 className="font-display font-bold text-white text-lg mb-6">Materiais</h4>
+              <ul className="space-y-3">
+                <li><Link to="/areia-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Areia em Caldas Novas</Link></li>
+                <li><Link to="/brita-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Brita em Caldas Novas</Link></li>
+                <li><Link to="/comprar-areia-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Comprar Areia</Link></li>
+                <li><Link to="/comprar-brita-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Comprar Brita</Link></li>
+                <li><Link to="/areia-media-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Areia Média</Link></li>
+                <li><Link to="/areia-fina-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Areia Fina</Link></li>
+                <li><Link to="/areia-grossa-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Areia Grossa</Link></li>
+                <li><Link to="/pedra-marroada-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Pedra Marroada</Link></li>
+                <li><Link to="/po-de-brita-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors text-sm">Pó de Brita</Link></li>
+              </ul>
+            </div>
+
             {/* Contact */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-2">
               <h4 className="font-display font-bold text-white text-lg mb-6">Contato</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
