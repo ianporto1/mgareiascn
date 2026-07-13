@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '10 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1621252179027-94459d278660?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/sand,construction?lock=1',
     category: 'Materiais',
   },
   {
@@ -63,7 +63,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '12 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/gravel,construction?lock=2',
     category: 'Dicas de Construção',
   },
   {
@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '14 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1541888081622-df8b190f84cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/blueprint,construction?lock=3',
     category: 'Ferramentas & Dicas',
   },
   {
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '18 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/rocks,construction?lock=4',
     category: 'Materiais',
   },
   {
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '20 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/foundation,construction?lock=5',
     category: 'Dicas de Construção',
   },
   {
@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '25 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1576013551627-11971f64b433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/swimmingpool,construction?lock=6',
     category: 'Curiosidades',
   },
   {
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '28 de Julho de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/wheelbarrow,construction?lock=7',
     category: 'Economia na Obra',
   },
   {
@@ -233,7 +233,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '02 de Agosto de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1605814595861-12ec3d27daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/river,sand?lock=8',
     category: 'Materiais',
   },
   {
@@ -261,7 +261,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '05 de Agosto de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/dumptruck,construction?lock=9',
     category: 'Gestão da Obra',
   },
   {
@@ -296,7 +296,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: '10 de Agosto de 2026',
     author: 'Equipe MG Areias e Britas',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://loremflickr.com/1200/800/masonry,construction?lock=10',
     category: 'Dicas de Construção',
   }
 ];
