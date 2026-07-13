@@ -313,7 +313,6 @@ export default function SeoLandingPage() {
             </div>
             <div className="hidden md:flex items-center gap-6">
               <Link to="/" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Início</Link>
-              <Link to="/qual-areia-usar" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Qual areia usar?</Link>
               <Link to="/calculadora-de-obra" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Calculadora</Link>
               <a href="https://wa.me/5564992465992" target="_blank" rel="noreferrer" className="bg-primary-500 hover:bg-primary-600 text-white px-5 py-2.5 rounded-md font-semibold transition-colors flex items-center gap-2 shadow-sm">
                 <Phone className="w-4 h-4" />

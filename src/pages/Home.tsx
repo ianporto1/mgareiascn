@@ -75,9 +75,8 @@ export default function App() {
               <a href="#home" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Início</a>
               <a href="#sobre" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Sobre Nós</a>
               <a href="#produtos" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Produtos</a>
-              <Link to="/dicas-de-construcao-caldas-novas" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Dicas de Obra</Link>
-              <Link to="/qual-areia-usar" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Qual areia usar?</Link>
               <Link to="/duvidas-frequentes" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">FAQ</Link>
+              <Link to="/blog" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Blog</Link>
               <Link to="/calculadora-de-obra" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Calculadora</Link>
               <a href="#contato" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Contato</a>
               
@@ -103,9 +102,8 @@ export default function App() {
               <a href="#home" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Início</a>
               <a href="#sobre" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Sobre Nós</a>
               <a href="#produtos" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Produtos</a>
-              <Link to="/dicas-de-construcao-caldas-novas" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Dicas de Obra</Link>
-              <Link to="/qual-areia-usar" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Qual areia usar?</Link>
               <Link to="/duvidas-frequentes" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">FAQ</Link>
+              <Link to="/blog" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Blog</Link>
               <Link to="/calculadora-de-obra" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Calculadora de Obra</Link>
               <a href="#contato" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Contato</a>
               <a href="https://wa.me/5564992465992" target="_blank" rel="noreferrer" className="mt-4 flex items-center justify-center gap-2 bg-primary-500 text-white px-4 py-3 rounded-md font-bold mx-2">
@@ -481,9 +479,8 @@ export default function App() {
                 <li><a href="#home" className="text-neutral-400 hover:text-primary-400 transition-colors">Início</a></li>
                 <li><a href="#sobre" className="text-neutral-400 hover:text-primary-400 transition-colors">Sobre Nós</a></li>
                 <li><a href="#produtos" className="text-neutral-400 hover:text-primary-400 transition-colors">Produtos</a></li>
-                <li><Link to="/dicas-de-construcao-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors">Dicas de Obra</Link></li>
-                <li><Link to="/qual-areia-usar" className="text-neutral-400 hover:text-primary-400 transition-colors">Qual areia usar?</Link></li>
                 <li><Link to="/duvidas-frequentes" className="text-neutral-400 hover:text-primary-400 transition-colors">FAQ</Link></li>
+                <li><Link to="/blog" className="text-neutral-400 hover:text-primary-400 transition-colors">Blog</Link></li>
                 <li><Link to="/calculadora-de-obra" className="text-neutral-400 hover:text-primary-400 transition-colors">Calculadora</Link></li>
               </ul>
             </div>

@@ -139,8 +139,6 @@ export default function QualAreiaUsar() {
             <div className="hidden lg:flex items-center gap-6 xl:gap-8">
               <Link to="/" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Início</Link>
               <Link to="/#sobre" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Sobre Nós</Link>
-              <Link to="/dicas-de-construcao-caldas-novas" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Dicas</Link>
-              <Link to="/qual-areia-usar" className="text-primary-500 font-medium transition-colors">Qual areia usar?</Link>
               <Link to="/calculadora-de-obra" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">Calculadora</Link>
               <Link to="/duvidas-frequentes" className="text-neutral-600 hover:text-primary-500 font-medium transition-colors">FAQ</Link>
               
@@ -165,8 +163,6 @@ export default function QualAreiaUsar() {
             <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3 flex flex-col">
               <Link to="/" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Início</Link>
               <Link to="/#sobre" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Sobre Nós</Link>
-              <Link to="/dicas-de-construcao-caldas-novas" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Dicas de Obra</Link>
-              <Link to="/qual-areia-usar" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-primary-500 hover:bg-neutral-50 rounded-md">Qual areia usar?</Link>
               <Link to="/calculadora-de-obra" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">Calculadora de Obra</Link>
               <Link to="/duvidas-frequentes" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-500 hover:bg-neutral-50 rounded-md">FAQ</Link>
               <a href="https://wa.me/5564992465992" target="_blank" rel="noreferrer" className="mt-4 flex items-center justify-center gap-2 bg-primary-500 text-white px-4 py-3 rounded-md font-bold mx-2">
@@ -358,8 +354,6 @@ export default function QualAreiaUsar() {
                 <li><Link to="/" className="text-neutral-400 hover:text-primary-400 transition-colors">Início</Link></li>
                 <li><Link to="/#sobre" className="text-neutral-400 hover:text-primary-400 transition-colors">Sobre Nós</Link></li>
                 <li><Link to="/#produtos" className="text-neutral-400 hover:text-primary-400 transition-colors">Produtos</Link></li>
-                <li><Link to="/dicas-de-construcao-caldas-novas" className="text-neutral-400 hover:text-primary-400 transition-colors">Dicas de Obra</Link></li>
-                <li><Link to="/qual-areia-usar" className="text-primary-400 transition-colors">Qual areia usar?</Link></li>
                 <li><Link to="/calculadora-de-obra" className="text-neutral-400 hover:text-primary-400 transition-colors">Calculadora</Link></li>
                 <li><Link to="/duvidas-frequentes" className="text-neutral-400 hover:text-primary-400 transition-colors">FAQ</Link></li>
               </ul>

@@ -13,3 +13,21 @@
   --color-brand-dark: #0e3020; /* Dark forest green for background */
   --color-brand-yellow: #ffcc00; /* Yellow accent */
 }
+
+@layer utilities {
+  .prose h2 {
+    @apply text-2xl md:text-3xl font-display font-bold text-neutral-900 mt-12 mb-6;
+  }
+  .prose h3 {
+    @apply text-xl md:text-2xl font-display font-bold text-neutral-900 mt-8 mb-4;
+  }
+  .prose p {
+    @apply text-lg text-neutral-600 leading-relaxed mb-6;
+  }
+  .prose ul {
+    @apply list-disc list-inside text-lg text-neutral-600 leading-relaxed mb-6 space-y-2;
+  }
+  .prose strong {
+    @apply font-bold text-neutral-900;
+  }
+}
