@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const faqs = [
   {
     question: "Vocês realizam entrega de areia e brita em quais regiões?",
-    answer: "Realizamos entregas em toda a cidade de Caldas Novas, GO e região: Morrinhos, Marzagão, Clubinho, Piracanjuba, Rio Quente. Graças à nossa frota própria, garantimos agilidade na entrega direto na sua obra."
+    answer: "Realizamos entregas em toda a cidade de Caldas Novas, GO e região: Morrinhos, Marzagão, Piracanjuba, Corumbaíba, Rio Quente, Ipameri, Santa Cruz de Goiás, Pires do Rio e Clubinho. Graças à nossa frota própria, garantimos agilidade na entrega direto na sua obra."
   },
   {
     question: "Qual a diferença entre areia fina, média e grossa?",
